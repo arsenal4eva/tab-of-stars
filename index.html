@@ -1,37 +1,79 @@
 <!doctype html>
+
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="src/style.css">
-		<title>tab-of-stars</title>
-	</head>
-	<section id="hero" class="hero-section">
-            <div class="hero-content">
-                <h1>Tab of stars</h1>
-                <p>A lot of things about stars in this tab</p>
-            </div>
-	</section>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <title>tab-of-stars</title>
+</head>
 
-	<hr>
-	<b>Star Trivia!</b>
-	<p>1. Stars are huge!</p>
-	<p>2. Red means cool, blue means hot. Red is usually associated with hot, but guess what! Cooler stars are red and hotter stars are blue!</p>
+<body>
 
-	<p>3. Neutron stars are really, really dense. A teaspoon of neutron star material is as heavy as a mountain on Earth!</p>
-	<p>4. Stars don't twinkle? Stars look like they are shimmering, but the light travels undisturbed from them. This illusion is caused by Earth's turbulent atmosphere bending and scrambling the light milliseconds before it reaches you!</p>
-	<p>5. WE are all made of stardust! Everything in existence was forged deep inside the cores of dying stars or cooked up during massive supernova explosions.</p>
+<div id="loader">
+    <div class="loader-content">
+        <div class="star">★</div>
+        <p>Let's explore the stars with TAB OF STARS!!!!</p>
+    </div>
+</div>
 
-	<hr>
+<main>
 
-	<h3>TODAY'S NASA DATA</h3>
-	<p>heehee time to fetch all of nasas data hahahahaha</p>
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Tab of stars</h1>
+            <p>A lot of things about stars in this tab</p>
+        </div>
+    </section>
 
-	<div id="app"></div>
-	<body>
-		<script type="module" src="/src/main.js"></script>
-	</body>
+    <hr>
+
+    <b>Star Trivia!</b>
+
+    <p>1. Stars are huge!</p>
+
+    <p>
+        2. Red means cool, blue means hot. Red is usually associated with hot,
+        but guess what! Cooler stars are red and hotter stars are blue!
+    </p>
+
+    <p>
+        3. Neutron stars are really, really dense. A teaspoon of neutron star
+        material is as heavy as a mountain on Earth!
+    </p>
+
+    <p>
+        4. Stars don't twinkle? Stars look like they are shimmering, but the
+        light travels undisturbed from them. This illusion is caused by Earth's
+        turbulent atmosphere bending and scrambling the light milliseconds
+        before it reaches you!
+    </p>
+
+    <p>
+        5. WE are all made of stardust! Everything in existence was forged deep
+        inside the cores of dying stars or cooked up during massive supernova
+        explosions.
+    </p>
+
+    <hr>
+
+    <h3>TODAY'S NASA DATA</h3>
+
+    <p>heehee time to fetch all of nasas data hahahahaha</p>
+
+    <div id="app"></div>
+
+</main>
+
+<script>
+    setTimeout(function () {
+        document.getElementById("loader").classList.add("hidden");
+    }, 1800);
+</script>
+
+<script type="module" src="/src/main.js"></script>
+
+</body>
 </html>
-	
-	
+

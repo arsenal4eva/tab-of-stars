@@ -43,24 +43,6 @@ body {
     color: var(--text-muted);
 }
 
-
-
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--btn-bg);
-    color: var(--btn-text);
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 500;
-    transition: opacity 0.2s;
-}
-
-.btn:hover {
-    opacity: 0.9;
-}
-
-
 hr {
     width: 100%;
     border: none;
@@ -68,45 +50,65 @@ hr {
     margin: 2rem 0;
 }
 
-#quiz {
-    text-align: center;
-    margin-bottom: 4rem;
-}
 
-footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid var(--border-color);
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    width: 100%;
-}
-
-
-.image-stack-sidebar {
-    position: fixed;             
-    top: 50%;                    
-    transform: translateY(-50%); 
-    z-index: 100;                
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #050816;
     display: flex;
-    flex-direction: column;      
-    gap: 20px;                  
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content{
+    text-align: center;
+    color: white;
+}
+
+.star {
+    font-size: 80px;
+    animation: starPulse 1.2s ease-in-out infinite;
+}
+
+.loader-content p {
+    margin-top: 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    opacity: 0;
+    animation: textFade 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes starPulse{
+    0%, 100% {
+        transform: scale(1);
+	opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.4);
+	opacity: 1;
+    }
 }
 
 
-.left-sidebar {
-    left: 25px;
+@keyframes textFade {
+    from {
+        opacity: 0;
+	transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+	transform: translateY(0);
+    }
 }
 
-.right-sidebar {
-    right: 25px;
-}
-
-.image-stack-sidebar img {
-    width: 400px;                 
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    pointer-events: none;        
-}
 
