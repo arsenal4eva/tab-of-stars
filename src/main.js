@@ -15,7 +15,7 @@ fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
 			media = `<video src="${data.url}" controls></video>`
 		}
 		document.querySelector("#app").innerHTML = `
-	<h1>#{data.title}</h1>
+	<h1>${data.title}</h1>
 	${media}
 	<p>${data.explanation}</p>
 	`;
